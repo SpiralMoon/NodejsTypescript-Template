@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/bin/www",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "lint": "eslint --fix src/**/* --cache",
     "html": "copyfiles -E -u 1 \"src/**/*.html\" \"src/**/*.css\" dist/",
     "build": "tsc",
     "prestart": "npm run build",
@@ -12,22 +12,29 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "typescript": "^3.6.4",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11",
-    "tslint": "^5.20.0",
-    "ts-node": "^8.4.1",
-    "class-validator": "^0.12.2"
+    "debug": "~4.3.2",
+    "class-validator": "^0.13.2",
+    "cookie-parser": "~1.4.6",
+    "eslint": "^8.3.0",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.1",
+    "morgan": "~1.10.0",
+    "prettier": "^2.4.1",
+    "pug": "3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "devDependencies": {
+    "eslint-config-airbnb-typescript": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "@types/cookie-parser": "^1.4.2",
-    "@types/debug": "^4.1.5",
-    "@types/http-errors": "^1.6.2",
-    "@types/morgan": "^1.7.37",
-    "@types/express": "^4.17.1"
+    "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.1",
+    "@types/morgan": "^1.9.3",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "@typescript-eslint/typescript-estree": "^5.3.1"
   }
 }
